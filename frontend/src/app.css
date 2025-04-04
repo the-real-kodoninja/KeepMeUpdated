@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gradient-bg: linear-gradient(135deg, #8a3ab9, #e95950, #4c68d7);
+}
+
+body {
+  @apply bg-neutral-light text-neutral-dark font-sans;
+}
+
+.feed-card {
+  @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure gradients work for text */
+.gradient-text {
+  background: var(--gradient-bg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
